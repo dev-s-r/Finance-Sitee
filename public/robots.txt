@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devsr.me/sitemap.xml
