@@ -1,79 +1,101 @@
-# Finance-Site
+# WealthLab — Financial Calculators
 
-## Project Description
-This is a personal project aimed at providing a comprehensive suite of finance-related calculators and resources to help users manage their finances more effectively.
+A modern, fully static financial calculator platform built with **React + Vite + Tailwind CSS**, deployed on GitHub Pages.
 
 ## Features
-- User-friendly interface
-- Various finance calculators
-- Responsive design for mobile devices
 
-## Available Calculators
-- Loan Calculator
-- Investment Calculator
-- Retirement Savings Calculator
+- **7 Calculators**: SIP, EMI, FD, Lumpsum, CAGR, Inflation Impact, Savings Goal
+- **Dark Mode Default** with light mode toggle
+- **Real-time calculations** — updates as you move sliders
+- **Interactive charts** powered by Recharts
+- **LocalStorage** — saves your inputs across sessions
+- **Mobile-first** responsive design
+- **No backend** — fully static, GitHub Pages ready
 
 ## Tech Stack
-- HTML
-- CSS
-- JavaScript
-- React
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dev-s-r/Finance-Site.git
-   cd Finance-Site
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+- React 18 + Vite 5
+- Tailwind CSS 3
+- Recharts
+- Lucide React (icons)
 
-## Build Instructions for GitHub Pages
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-2. Deploy to GitHub Pages:
-   ```bash
-   npm run deploy
-   ```
+## Setup
 
-## Project Structure Overview
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## GitHub Pages Deployment
+
+The app is configured with base path `/Finance-Site/` in `vite.config.js`.
+
+```bash
+npm run deploy
+```
+
+Or use GitHub Actions to auto-deploy the `dist/` folder.
+
+## Project Structure
+
 ```
 Finance-Site/
 ├── public/
+│   └── favicon.svg
 ├── src/
 │   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── CalculatorCard.jsx
+│   │   ├── CalculatorLayout.jsx
+│   │   ├── InputSlider.jsx
+│   │   ├── InputField.jsx
+│   │   ├── ResultCard.jsx
+│   │   ├── ChartComponent.jsx
+│   │   └── InsightBox.jsx
 │   ├── pages/
-│   └── App.js
-├── package.json
-└── README.md
+│   │   ├── HomePage.jsx
+│   │   ├── SIPCalculator.jsx
+│   │   ├── EMICalculator.jsx
+│   │   ├── FDCalculator.jsx
+│   │   ├── LumpSumCalculator.jsx
+│   │   ├── CAGRCalculator.jsx
+│   │   ├── InflationCalculator.jsx
+│   │   └── SavingsGoalCalculator.jsx
+│   ├── utils/
+│   │   ├── format.js
+│   │   ├── localStorage.js
+│   │   └── calculators/
+│   │       ├── sipCalculator.js
+│   │       ├── emiCalculator.js
+│   │       ├── fdCalculator.js
+│   │       ├── lumpSumCalculator.js
+│   │       ├── cagrCalculator.js
+│   │       ├── inflationCalculator.js
+│   │       └── savingsGoalCalculator.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
 ```
 
-## Contributing Guidelines
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
-   ```bash
-   git checkout -b feature/my-feature
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/my-feature
-   ```
-5. Open a pull request.
-
 ## Disclaimer
-This project is for educational use only and should not be relied upon for any financial decisions.
+
+This project is for educational purposes only and should not be relied upon for financial decisions.
 
 ## License
-MIT License 
+
+MIT License
